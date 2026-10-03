@@ -1,0 +1,566 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(
+        135deg,
+        #f8faff,
+        #eef4ff
+    );
+    color: #17213a;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    width: calc(100% - 40px);
+    max-width: 1100px;
+
+    margin: 20px auto 0;
+    padding: 18px 25px;
+
+    background: white;
+    border-radius: 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 8px 25px rgba(30, 60, 120, 0.08);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #17213a;
+}
+
+.header-info {
+    font-size: 15px;
+    font-weight: bold;
+    color: #52627a;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    width: calc(100% - 40px);
+    max-width: 850px;
+
+    margin: 0 auto;
+    padding: 50px 0;
+
+    flex: 1;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.intro h1 {
+    font-size: 34px;
+    margin-bottom: 12px;
+    color: #17213a;
+}
+
+.intro p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #667085;
+}
+
+
+/* =========================
+   SELECTION CARD
+========================= */
+
+.selection-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(30, 60, 120, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+
+/* =========================
+   SELECT GROUP
+========================= */
+
+.select-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.select-group label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #344054;
+}
+
+.select-group select {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #d8dee9;
+    border-radius: 10px;
+
+    background: white;
+
+    font-size: 15px;
+    color: #17213a;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.select-group select:focus {
+    border-color: #4f7cff;
+    box-shadow: 0 0 0 3px rgba(79, 124, 255, 0.12);
+}
+
+.select-group select:disabled {
+    background: #f5f6f8;
+    color: #98a2b3;
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    border: none;
+    cursor: pointer;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    border-radius: 10px;
+
+    transition: 0.2s;
+}
+
+
+/* START BUTTON */
+
+.start-btn {
+    width: 100%;
+
+    padding: 14px;
+
+    background: #4f7cff;
+    color: white;
+}
+
+.start-btn:hover:not(:disabled) {
+    background: #3d68e8;
+    transform: translateY(-1px);
+}
+
+.start-btn:disabled {
+    background: #cbd2df;
+    cursor: not-allowed;
+}
+
+
+/* CHECK BUTTON */
+
+.check-btn {
+    width: 100%;
+
+    padding: 14px;
+
+    background: #4f7cff;
+    color: white;
+
+    margin-top: 15px;
+}
+
+.check-btn:hover {
+    background: #3d68e8;
+}
+
+
+/* NEXT BUTTON */
+
+.next-btn {
+    width: 100%;
+
+    padding: 14px;
+
+    background: #17213a;
+    color: white;
+
+    margin-top: 15px;
+}
+
+.next-btn:hover {
+    background: #273552;
+}
+
+
+/* RESTART BUTTON */
+
+.restart-btn {
+    padding: 13px 25px;
+
+    background: #4f7cff;
+    color: white;
+
+    margin-top: 20px;
+}
+
+.restart-btn:hover {
+    background: #3d68e8;
+}
+
+
+/* =========================
+   QUIZ SECTION
+========================= */
+
+.quiz-section {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(30, 60, 120, 0.08);
+}
+
+
+/* =========================
+   QUIZ TOP
+========================= */
+
+.quiz-top {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    color: #667085;
+}
+
+
+/* =========================
+   WORD CARD
+========================= */
+
+.word-card {
+    text-align: center;
+
+    background: #f5f7ff;
+
+    border-radius: 16px;
+
+    padding: 45px 20px;
+
+    margin-bottom: 30px;
+}
+
+.word-label {
+    font-size: 13px;
+    color: #667085;
+
+    margin-bottom: 12px;
+}
+
+.word-card h2 {
+    font-size: 42px;
+    color: #17213a;
+}
+
+
+/* =========================
+   ANSWER AREA
+========================= */
+
+.answer-area {
+    display: flex;
+    flex-direction: column;
+}
+
+.answer-area label {
+    font-size: 14px;
+    font-weight: bold;
+
+    color: #344054;
+
+    margin-bottom: 8px;
+}
+
+.answer-area input {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border: 1px solid #d8dee9;
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.answer-area input:focus {
+    border-color: #4f7cff;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(79, 124, 255, 0.12);
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+.result {
+    margin-top: 18px;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    min-height: 20px;
+}
+
+
+/* =========================
+   FINISH SECTION
+========================= */
+
+.finish-section {
+    background: white;
+
+    padding: 45px 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(30, 60, 120, 0.08);
+
+    text-align: center;
+}
+
+.finish-section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.finish-section p {
+    color: #667085;
+    font-size: 17px;
+}
+
+
+/* =========================
+   HIDDEN
+========================= */
+
+.hidden {
+    display: none;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    text-align: center;
+
+    padding: 20px;
+
+    color: #98a2b3;
+
+    font-size: 13px;
+}
+/* =========================
+   QUIZ DIRECTION
+========================= */
+
+.direction-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.direction-group > label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #344054;
+}
+
+.direction-options {
+    display: flex;
+    gap: 12px;
+}
+
+.direction-option {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 14px 16px;
+
+    border: 1px solid #d8dee9;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.direction-option:hover {
+    border-color: #4f7cff;
+    background: #f8faff;
+}
+
+.direction-option input {
+    accent-color: #4f7cff;
+}
+
+.direction-option span {
+    font-size: 14px;
+    color: #344054;
+}
+
+.direction-option strong {
+    margin: 0 5px;
+    color: #4f7cff;
+}
+
+
+/* =========================
+   MOBILE DIRECTION
+========================= */
+
+@media (max-width: 700px) {
+
+    .direction-options {
+        flex-direction: column;
+    }
+
+    .direction-option {
+        width: 100%;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .header {
+        width: calc(100% - 20px);
+
+        margin-top: 10px;
+
+        padding: 15px 17px;
+
+        border-radius: 15px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .header-info {
+        font-size: 13px;
+    }
+
+    .container {
+        width: calc(100% - 20px);
+
+        padding: 35px 0;
+    }
+
+    .intro {
+        margin-bottom: 25px;
+    }
+
+    .intro h1 {
+        font-size: 26px;
+    }
+
+    .intro p {
+        font-size: 14px;
+    }
+
+    .selection-card,
+    .quiz-section,
+    .finish-section {
+        padding: 22px 18px;
+
+        border-radius: 16px;
+    }
+
+    .word-card {
+        padding: 35px 15px;
+    }
+
+    .word-card h2 {
+        font-size: 34px;
+    }
+
+    .footer {
+        padding-bottom: 15px;
+    }
+}
